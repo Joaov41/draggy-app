@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <!-- Authored for the Draggy site: a daylight Desktop wallpaper of layered ridges over a lake. -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8db8ee"/>
+      <stop offset="0.62" stop-color="#d9e8fa"/>
+      <stop offset="1" stop-color="#f3f7fd"/>
+    </linearGradient>
+    <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bcd3f3"/>
+      <stop offset="1" stop-color="#e5eefb"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <circle cx="640" cy="205" r="92" fill="#fff6e3" opacity="0.9"/>
+  <path d="M0 560 L120 500 L230 530 L360 455 L470 500 L590 430 L720 488 L850 420 L980 470 L1110 410 L1240 462 L1380 404 L1500 450 L1600 420 L1600 1000 L0 1000 Z" fill="#a9c4ea"/>
+  <path d="M0 610 L150 540 L280 590 L420 520 L560 575 L700 505 L840 568 L990 498 L1130 560 L1270 492 L1420 552 L1600 500 L1600 1000 L0 1000 Z" fill="#7fa3dc"/>
+  <path d="M0 668 L170 600 L320 650 L470 592 L640 648 L790 590 L960 646 L1120 586 L1290 640 L1450 590 L1600 628 L1600 1000 L0 1000 Z" fill="#5a85cc"/>
+  <path d="M0 720 L1600 720 L1600 1000 L0 1000 Z" fill="url(#lake)"/>
+  <path d="M0 720 L170 760 L320 734 L470 770 L640 738 L790 772 L960 740 L1120 774 L1290 744 L1450 770 L1600 750 L1600 720 Z" fill="#5a85cc" opacity="0.35"/>
+  <path d="M0 860 C260 830 520 900 800 872 C1080 844 1340 900 1600 868 L1600 1000 L0 1000 Z" fill="#3c69b8"/>
+  <path d="M0 920 C300 900 560 950 860 930 C1160 910 1380 950 1600 932 L1600 1000 L0 1000 Z" fill="#2a539f"/>
+</svg>

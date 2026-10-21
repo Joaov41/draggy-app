@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Draggy – iPhone to Mac, by dragging</title>
+  <meta name="description" content="Drag a file off the edge of your iPhone or iPad and it lands on your Mac's Desktop, and back. Free, local network only, no account.">
+  <meta name="theme-color" content="#d9e8fa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b1330" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preload" href="fonts/HubotSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.replace("no-js", "js")</script>
+</head>
+<body class="home">
+  <svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-doc" viewBox="0 0 48 60"><path d="M6 2h26l14 14v40a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z" fill="#fff" stroke="#c9ced8"/><path d="M32 2v12a2 2 0 0 0 2 2h12" fill="#eef1f6" stroke="#c9ced8"/><path d="M11 27h26M11 33h26M11 39h18" stroke="#b7bfcd" stroke-width="2" stroke-linecap="round"/><rect x="4" y="44" width="22" height="10" rx="2" fill="#d7263d"/><text x="15" y="51.6" text-anchor="middle" font-family="-apple-system,Helvetica,Arial" font-size="7" font-weight="700" fill="#fff">PDF</text></symbol>
+      <symbol id="i-photo" viewBox="0 0 60 48"><rect x="2" y="2" width="56" height="44" rx="4" fill="#fff" stroke="#c9ced8"/><rect x="6" y="6" width="48" height="36" rx="2" fill="#bcd5f5"/><circle cx="42" cy="15" r="4" fill="#fff4d8"/><path d="M6 36 18 22l9 10 7-7 20 17H6Z" fill="#4f7fd0"/><path d="M6 42v-6l12-9 10 9 6-5 20 11Z" fill="#2f5bab"/></symbol>
+      <symbol id="i-text" viewBox="0 0 48 60"><path d="M6 2h26l14 14v40a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z" fill="#fff" stroke="#c9ced8"/><path d="M32 2v12a2 2 0 0 0 2 2h12" fill="#eef1f6" stroke="#c9ced8"/><path d="M11 24h26M11 30h26M11 36h26M11 42h14" stroke="#b7bfcd" stroke-width="2" stroke-linecap="round"/></symbol>
+      <symbol id="i-folder" viewBox="0 0 64 52"><path d="M4 8a4 4 0 0 1 4-4h16l6 6h26a4 4 0 0 1 4 4v4H4Z" fill="#5d9cf0"/><rect x="4" y="14" width="56" height="36" rx="4" fill="#7db3f7"/><path d="M22 32h20m0 0-6-5m6 5-6 5" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" opacity=".95"/></symbol>
+      <symbol id="g-arrows" viewBox="0 0 24 24"><path d="M4 8h14m0 0-4-4m4 4-4 4M20 16H6m0 0 4-4m-4 4 4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="g-share" viewBox="0 0 24 24"><path d="M12 15V3m0 0L8 7m4-4 4 4M8 10H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="g-clip" viewBox="0 0 24 24"><path d="M9 4h6m-6 0a1 1 0 0 0-1 1v1h8V5a1 1 0 0 0-1-1M8 5H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M8 12h8M8 16h5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="g-resume" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 4v4h-4M10 9v6l5-3Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="g-macs" viewBox="0 0 24 24"><path d="M3 5h11v8H3zM10 11h11v8H10zM6 16h2M15 22h2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="g-ipad" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M11 18h2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+      <symbol id="g-phone" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M11 18.5h2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+      <symbol id="g-wifi" viewBox="0 0 24 24"><path d="M3 9a13 13 0 0 1 18 0M6 12.5a8.5 8.5 0 0 1 12 0M9 16a4 4 0 0 1 6 0" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><circle cx="12" cy="19" r="1.3" fill="currentColor"/></symbol>
+      <symbol id="g-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="g-page" viewBox="0 0 24 24"><path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 11h6M9 14.5h6M9 18h4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+      <symbol id="g-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="g-person" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5 20a7 7 0 0 1 14 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="menubar">
+    <nav class="menubar-inner" aria-label="Site">
+      <a class="menu-app" href="./"><img src="assets/icon.png" alt="" width="18" height="18">Draggy</a>
+      <a class="menu-item hide-sm" href="#how">How it works</a>
+      <a class="menu-item hide-sm" href="#privacy">Privacy</a>
+      <a class="menu-item hide-sm" href="transparency.html">Transparency</a>
+      <a class="menu-item" href="#get">Get Draggy</a>
+      <span class="menu-status" aria-hidden="true">
+        <svg class="status-glyph"><use href="#g-phone"/></svg>
+        <svg class="status-glyph"><use href="#g-wifi"/></svg>
+        <span class="clock">Tue 9:41</span>
+      </span>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="desk" aria-labelledby="hero-title">
+      <div class="window hero-window">
+        <div class="titlebar" aria-hidden="true">
+          <span class="lights"><i></i><i></i><i></i></span>
+          <span class="title">Draggy</span>
+        </div>
+        <div class="window-body hero-body">
+          <h1 id="hero-title">Your iPhone and Mac, one&nbsp;screen.</h1>
+          <p class="lede">Hold your iPhone next to your Mac and drag a file off its edge. It slides onto the Mac and lands on your Desktop right where it crossed. Drag from Finder to the screen edge to send it back.</p>
+          <div class="actions">
+            <a class="push default" href="#get">Get Draggy</a>
+            <a class="push" href="#how">How it works</a>
+          </div>
+        </div>
+        <div class="statusbar">Free for Mac, iPhone and iPad · Local network only · No account</div>
+      </div>
+
+      <div class="desk-icons" id="desk-icons" role="group" aria-label="Desktop files you can drag onto the iPhone">
+        <button class="desk-icon in-column first" type="button" data-name="River Valley.jpg">
+          <svg class="icon-art wide" viewBox="0 0 60 48" aria-hidden="true"><use href="#i-photo"/></svg>
+          <span class="label">River Valley.jpg</span>
+        </button>
+        <button class="desk-icon in-column second" type="button" data-name="Meeting Notes.md">
+          <svg class="icon-art" viewBox="0 0 48 60" aria-hidden="true"><use href="#i-text"/></svg>
+          <span class="label">Meeting Notes.md</span>
+        </button>
+        <button class="desk-icon at-seam arriving" type="button" data-name="Q4 Report.pdf">
+          <svg class="icon-art" viewBox="0 0 48 60" aria-hidden="true"><use href="#i-doc"/></svg>
+          <span class="label">Q4 Report.pdf</span>
+        </button>
+      </div>
+
+      <figure class="docked-phone" id="phone">
+        <div class="phone-frame">
+          <img src="assets/receiving.jpg" width="700" height="1329" alt="Draggy on iPhone: a grid of files with a rainbow glow around the screen as an incoming file slides in.">
+          <span class="phone-glow" aria-hidden="true"></span>
+        </div>
+      </figure>
+      <span class="bloom rest" id="bloom" aria-hidden="true"></span>
+
+      <p class="desk-hint" aria-live="polite"><span id="hint-text">Try it: drag a file onto the iPhone, or select one and press Return.</span></p>
+    </section>
+
+    <section class="sheet watch" id="watch" aria-labelledby="watch-title">
+      <div class="window player-window">
+        <div class="titlebar" aria-hidden="true">
+          <span class="lights"><i></i><i></i><i></i></span>
+          <span class="title">Draggy in action.mp4</span>
+        </div>
+        <div class="player-body">
+          <video id="demo" muted loop playsinline preload="metadata" poster="assets/demo-poster.jpg" width="1280" height="720" aria-describedby="watch-title">
+            <source src="assets/demo.webm" type="video/webm">
+            <source src="assets/demo.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="player-caption"><span id="watch-title">A file leaves the iPhone and lands on the Mac.</span> Recorded on a real iPhone and Mac.</p>
+      </div>
+    </section>
+
+    <section class="sheet" id="how" aria-labelledby="how-title">
+      <div class="window list-window">
+        <div class="titlebar" aria-hidden="true">
+          <span class="lights"><i></i><i></i><i></i></span>
+          <span class="title">Getting Started</span>
+        </div>
+        <div class="window-body">
+          <h2 id="how-title">Pair once. Then just drag.</h2>
+          <p class="sub">Pair with a six-digit code the first time. After that, the two find each other on their own whenever both apps are open.</p>
+          <table class="listview">
+            <thead><tr><th scope="col">You</th><th scope="col">Draggy</th></tr></thead>
+            <tbody>
+              <tr><th scope="row"><span class="step">Hold the iPhone next to the Mac</span>Tell Draggy which side of the screen it sits on, then press and hold Connect.</th><td>The Mac shows a code. Type it on the phone and they are paired.</td></tr>
+              <tr><th scope="row"><span class="step">Drag a file off the edge</span>Long-press a file and drag it to the edge facing the Mac.</th><td>A glow runs around the phone and the file appears on the Mac's screen.</td></tr>
+              <tr><th scope="row"><span class="step">Let go</span>Release it over the edge.</th><td>It lands on your Desktop where it crossed, or in a folder you choose.</td></tr>
+              <tr><th scope="row"><span class="step">Send one back</span>Drop a file from Finder on the Mac's screen edge.</th><td>It shows up in your iPhone's grid.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet split" aria-labelledby="features-title">
+      <div class="window icon-window">
+        <div class="titlebar" aria-hidden="true">
+          <span class="lights"><i></i><i></i><i></i></span>
+          <span class="title">Inside Draggy</span>
+        </div>
+        <div class="window-body">
+          <h2 id="features-title">Made to feel like one device.</h2>
+          <p class="sub">Files move over your own Wi-Fi, encrypted, straight from one device to the other.</p>
+          <div class="finder-split">
+            <ul class="iconview" aria-label="Features">
+              <li><button class="file" type="button" aria-pressed="true"><span class="file-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#g-arrows"/></svg></span><span class="file-name">Both directions</span><span class="file-desc">iPhone to Mac by dragging off the edge, Mac to iPhone by dropping on the screen edge.</span></button></li>
+              <li><button class="file" type="button" aria-pressed="false"><span class="file-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#g-share"/></svg></span><span class="file-name">Share sheet</span><span class="file-desc">Share photos, files, links or text from any app straight into Draggy.</span></button></li>
+              <li><button class="file" type="button" aria-pressed="false"><span class="file-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#g-clip"/></svg></span><span class="file-name">Text and clipboard</span><span class="file-desc">Drop text on the edge, or send your iPhone's clipboard to the Mac's.</span></button></li>
+              <li><button class="file" type="button" aria-pressed="false"><span class="file-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#g-resume"/></svg></span><span class="file-name">Resumes if Wi-Fi drops</span><span class="file-desc">An interrupted transfer picks up where it stopped once the link is back.</span></button></li>
+              <li><button class="file" type="button" aria-pressed="false"><span class="file-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#g-macs"/></svg></span><span class="file-name">Several Macs</span><span class="file-desc">Pair with more than one Mac and choose which gets your files.</span></button></li>
+              <li><button class="file" type="button" aria-pressed="false"><span class="file-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#g-ipad"/></svg></span><span class="file-name">iPad too</span><span class="file-desc">The same app on iPad, with a grid that uses the whole screen.</span></button></li>
+            </ul>
+            <aside class="quicklook" aria-live="polite">
+              <span class="ql-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#g-arrows"/></svg></span>
+              <strong class="ql-title">Both directions</strong>
+              <p class="ql-desc">iPhone to Mac by dragging off the edge, Mac to iPhone by dropping on the screen edge.</p>
+            </aside>
+          </div>
+        </div>
+      </div>
+      <figure class="phone-still">
+        <div class="phone-frame">
+          <img src="assets/pairing.jpg" width="700" height="1520" alt="Draggy's pairing screen on iPhone: a glowing rainbow border around the text 'Hold iPhone next to your Mac' and a round Connect button.">
+        </div>
+        <figcaption class="plate">Pairing: hold it next to the Mac and press&nbsp;Connect.</figcaption>
+      </figure>
+    </section>
+
+    <section class="sheet" id="privacy" aria-labelledby="privacy-title">
+      <div class="window info-window">
+        <div class="titlebar" aria-hidden="true">
+          <span class="lights"><i></i><i></i><i></i></span>
+          <span class="title">Draggy Info</span>
+        </div>
+        <div class="window-body">
+          <div class="info-head">
+            <img src="assets/icon.png" alt="" width="64" height="64">
+            <div>
+              <h2 id="privacy-title">Nothing leaves your devices.</h2>
+              <p class="sub">Draggy talks only to your own paired devices, on your local network. There is no server to send anything to.</p>
+            </div>
+          </div>
+          <dl class="info-rows">
+            <div><dt>Account</dt><dd>None. Nothing to sign up for.</dd></div>
+            <div><dt>Cloud</dt><dd>None. No analytics, nothing tracked.</dd></div>
+            <div><dt>Network</dt><dd>Your local network only. Never mobile data, never the internet.</dd></div>
+            <div><dt>Encryption</dt><dd>Between paired devices, with a key each pair agrees through a six-digit code.</dd></div>
+            <div><dt>Clipboard</dt><dd>Read only when you ask. Never in the background.</dd></div>
+            <div><dt>Crash reports</dt><dd>Stay on your device unless you turn them on and export them yourself.</dd></div>
+            <div><dt>Price</dt><dd>Free.</dd></div>
+          </dl>
+          <p class="info-links"><a href="privacy.html">Read the Privacy Policy</a><a href="transparency.html">How Draggy was built</a></p>
+        </div>
+      </div>
+      <div class="desk-docs" aria-label="Documents">
+        <a class="desk-icon as-link" href="privacy.html"><svg class="icon-art" viewBox="0 0 48 60" aria-hidden="true"><use href="#i-text"/></svg><span class="label">Privacy Policy</span></a>
+        <a class="desk-icon as-link" href="transparency.html"><svg class="icon-art" viewBox="0 0 48 60" aria-hidden="true"><use href="#i-text"/></svg><span class="label">Transparency</span></a>
+      </div>
+    </section>
+
+    <section class="sheet get" id="get" aria-labelledby="get-title">
+      <div class="window volume-window">
+        <div class="titlebar" aria-hidden="true">
+          <span class="lights"><i></i><i></i><i></i></span>
+          <span class="title">Draggy 1.1</span>
+        </div>
+        <div class="window-body">
+          <h2 id="get-title">Get Draggy</h2>
+          <p class="sub">Free, with no tiers. You need both apps: one on your Mac and one on your iPhone or iPad.</p>
+          <div class="get-row">
+            <div class="get-col">
+              <div class="dmg-stage" aria-hidden="true">
+                <span class="dmg-item"><img src="assets/icon.png" alt="" width="72" height="72"><span>Draggy</span></span>
+                <svg class="dmg-arrow" viewBox="0 0 120 24"><path d="M4 12h104m0 0-10-8m10 8-10 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span class="dmg-item"><svg class="folder" viewBox="0 0 64 52"><use href="#i-folder"/></svg><span>Applications</span></span>
+              </div>
+              <h3>Mac</h3>
+              <p class="req">macOS 15 Sequoia or later. Signed with a Developer ID and notarized by Apple.</p>
+              <a class="push default" id="mac-download" href="https://github.com/Joaov41/draggy-app/releases/download/v1.1/Draggy-1.1.dmg" download>Download for Mac</a>
+              <p class="req">Version 1.1, 2.0 MB disk image.</p>
+            </div>
+            <div class="get-col">
+              <div class="dmg-stage" aria-hidden="true">
+                <span class="dmg-item"><svg class="glyph-tile" viewBox="0 0 24 24"><use href="#g-phone"/></svg><span>iPhone</span></span>
+                <span class="dmg-item"><svg class="glyph-tile" viewBox="0 0 24 24"><use href="#g-ipad"/></svg><span>iPad</span></span>
+              </div>
+              <h3>iPhone and iPad</h3>
+              <p class="req">iOS and iPadOS 18 or later. Join the public beta through Apple's TestFlight app.</p>
+              <a class="push default" id="testflight" href="https://testflight.apple.com/join/Jb3W17bK">Join the TestFlight beta</a>
+              <p class="req">The link opens once Apple approves the beta.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="dock-wrap">
+    <nav class="dock" aria-label="More">
+      <a href="./" class="dock-item"><img src="assets/icon.png" alt="" width="40" height="40"><span>Draggy</span></a>
+      <a href="privacy.html" class="dock-item"><svg aria-hidden="true"><use href="#g-shield"/></svg><span>Privacy</span></a>
+      <a href="transparency.html" class="dock-item"><svg aria-hidden="true"><use href="#g-page"/></svg><span>Transparency</span></a>
+      <a href="mailto:joao.valente@outlook.com" class="dock-item"><svg aria-hidden="true"><use href="#g-mail"/></svg><span>Contact</span></a>
+      <a href="https://portfolio.ovalente.online" class="dock-item"><svg aria-hidden="true"><use href="#g-person"/></svg><span>Joao Valente</span></a>
+    </nav>
+    <p class="made plate">Draggy is made by Joao Valente, an independent Apple developer.</p>
+  </footer>
+
+  <script src="desktop.js" defer></script>
+</body>
+</html>
