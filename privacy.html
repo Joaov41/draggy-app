@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Privacy Policy · Draggy</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preload" href="fonts/HubotSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="menubar">
+    <nav class="menubar-inner" aria-label="Site">
+      <a class="menu-app" href="./"><img src="assets/icon.png" alt="" width="18" height="18">Draggy</a>
+      <a class="menu-item" href="privacy.html">Privacy</a>
+      <a class="menu-item" href="transparency.html">Transparency</a>
+      <a class="menu-item hide-sm" href="./#get">Get Draggy</a>
+      <span class="menu-status" aria-hidden="true"><span class="clock">Tue 9:41</span></span>
+    </nav>
+  </header>
+  <main id="main" class="doc-desk">
+    <article class="window doc-window">
+      <div class="titlebar" aria-hidden="true">
+        <span class="lights"><i></i><i></i><i></i></span>
+        <span class="title">Privacy Policy</span>
+      </div>
+      <div class="window-body">
+<h1 id="draggy-privacy-policy">Draggy Privacy Policy</h1>
+<p>Last updated 22 October 2026</p>
+<p>Draggy moves files and text between your iPhone or iPad and your Mac
+over your own local network. Nothing you move goes through a server.
+This policy explains what the apps handle, what they keep on your
+devices, and what leaves them.</p>
+<h2 id="what-this-policy-covers">What this policy covers</h2>
+<p>The Draggy app for iPhone and iPad, its share extension, the Draggy
+app for Mac, and the pages that describe them. It describes version
+1.3.</p>
+<h2 id="what-the-apps-handle">What the apps handle</h2>
+<ul>
+<li><strong>Files you send.</strong> When you drag a file off one
+screen, share it into Draggy, or import it, the file is read on the
+sending device and copied to the receiving device. Draggy does not
+inspect the contents beyond making a thumbnail and checking that the
+copy arrived intact.</li>
+<li><strong>Text you send.</strong> Text is read only when you act: when
+you tap "Send Clipboard to Mac" on iPhone or iPad, or drop text on the
+Mac's screen edge. The receiving device puts it on its clipboard. Draggy
+never reads your clipboard in the background.</li>
+<li><strong>Device details.</strong> Each device has a name (the one you
+gave it in Settings), a random identifier created on first launch, and
+an encryption key pair. These are exchanged when you pair so the devices
+can recognise each other.</li>
+</ul>
+<h2 id="permissions">Permissions</h2>
+<ul>
+<li><strong>Local Network</strong> (iPhone and iPad): to find your Mac
+and connect to it.</li>
+<li><strong>Automation for Finder</strong> (Mac): to place a received
+file on your Desktop where it landed. If you decline, files still
+arrive; they just are not positioned.</li>
+<li><strong>Launch at Login</strong> (Mac, optional): to start Draggy
+when you log in.</li>
+</ul>
+<p>You can turn these off at any time in Settings on iPhone and iPad, or
+System Settings on the Mac.</p>
+<h2 id="what-is-saved-on-your-devices">What is saved on your
+devices</h2>
+<ul>
+<li><strong>Your files.</strong> On iPhone and iPad, files live in
+Draggy's folder, which you can see in the Files app. Items shared from
+other apps wait in a folder shared with the share extension until Draggy
+opens. On the Mac, files arrive in
+<code>~/Library/Caches/com.draggy.mac/incoming</code> and are then moved
+to your Desktop or the folder you choose in Settings.</li>
+<li><strong>Pairing.</strong> The other device's name, identifier and
+public key, and your own key pair, are stored in the Keychain.</li>
+<li><strong>Preferences.</strong> Which side of the Mac your iPhone sits
+on, the destination folder, sounds, and diagnostics settings.</li>
+<li><strong>Diagnostics, only if you turn them on.</strong> Crash and
+hang reports that Apple provides to the app are saved on the device, in
+<code>~/Library/Logs/Draggy</code> on the Mac and the equivalent folder
+inside the app on iPhone and iPad. They stay there until you export
+them.</li>
+</ul>
+<h2 id="network-activity-and-sharing">Network activity and sharing</h2>
+<ul>
+<li><strong>Local only.</strong> The devices find each other with
+Bonjour on your local network. The Mac advertises its name and a random
+identifier there while Draggy runs. Every connection is encrypted (TLS
+with a key the two devices agreed when you paired). Draggy refuses
+mobile data, and the files and text you move never leave your local
+network.</li>
+<li><strong>Checking for a new version (Mac only).</strong> The Mac app
+is a direct download, so nothing else would tell you a new one exists.
+Once a day it fetches a small file listing the released versions
+(<code>appcast.xml</code> on Draggy's own site, served by GitHub Pages),
+and when one is newer it offers to download and install it for you. The
+update itself comes from the Draggy releases page on GitHub. These
+requests carry no account, no identifier and nothing about you, your
+devices or your files; the usual information any web request carries,
+such as your IP address, is visible to GitHub as it would be if you
+opened the page in a browser. Updating is handled by Sparkle, a widely
+used open-source updater, and every update must be signed with Draggy's
+own key before it will be installed. Turn it off with "Check for new
+versions" in Settings → General, or update by hand from the releases
+page. These are the only requests Draggy makes outside your own network.
+The iPhone and iPad apps update through the App Store and make none of
+them.</li>
+<li><strong>No developer servers.</strong> Draggy has no accounts, cloud
+sync, analytics, advertising or automatic crash upload. It does not use
+AI services to process your files or text.</li>
+<li><strong>Exports you choose.</strong> A diagnostics export is a zip
+you create and decide where to send. It contains the saved crash reports
+and the current session's Draggy log lines. These carry sizes, timings
+and error descriptions, not file contents or clipboard text. Your home
+folder is replaced with <code>~</code>. Review it before sharing.</li>
+<li><strong>Apple.</strong> macOS may contact Apple to check the Mac
+app's signature. If you install a beta through TestFlight, Apple shares
+crash reports and feedback you choose to send with the developer under
+TestFlight's terms.</li>
+<li><strong>Email.</strong> If you email us, we receive your address and
+what you write, and use it only to reply.</li>
+</ul>
+<p>We do not sell personal information or use it for advertising.</p>
+<h2 id="retention-and-your-choices">Retention and your choices</h2>
+<p>Everything above stays on your devices until you delete it. Delete
+files in Draggy or the Files app on iPhone and iPad, or in Finder on the
+Mac. Unpair a device from either app to remove its pairing details.
+Deleting the apps removes their data, apart from Keychain items, which
+macOS keeps until you remove them in Keychain Access, and any backups
+you control. We cannot access or erase anything on your devices.</p>
+<p>Where applicable law gives you rights over personal information you
+sent us by email, you can ask us to access, correct or delete it, and
+you can complain to your local data protection authority.</p>
+<h2 id="children">Children</h2>
+<p>Draggy is a general-purpose utility, not directed at children under
+13. It asks for no age or account information.</p>
+<h2 id="changes">Changes</h2>
+<p>We will publish changes here and update the date above.</p>
+<h2 id="contact">Contact</h2>
+<p>Draggy is developed by Joao Valente. For questions or privacy
+requests, email <a
+href="mailto:joao.valente@outlook.com">joao.valente@outlook.com</a>.</p>
+      </div>
+    </article>
+  </main>
+  <footer class="dock-wrap">
+    <p class="made plate">Draggy is made by <a href="https://portfolio.ovalente.online">Joao Valente</a>, an independent Apple developer · <a href="mailto:joao.valente@outlook.com">Contact</a></p>
+  </footer>
+</body>
+</html>
