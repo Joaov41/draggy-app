@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Draggy</title>
+        <item>
+            <title>1.2</title>
+            <pubDate>Thu, 22 Oct 2026 17:22:15 +0100</pubDate>
+            <sparkle:version>3</sparkle:version>
+            <sparkle:shortVersionString>1.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/Joaov41/draggy-app/releases/download/v1.2/Draggy-1.2.dmg" length="2103343" type="application/octet-stream"/>
+        </item>
+    </channel>
+</rss>
